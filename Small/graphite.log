@@ -1,0 +1,54 @@
+[Process] Enabled multithreading
+[Process] Number of cores = 8
+[Process] Max. concurrent threads = 8
+[Process] Disabled FPE
+[ModuleManager] Loading module 'skin_qt5'
+[Init] Initializing library 'renderer_gl'
+[Init] Initialized library 'renderer_gl'
+[Init] Initializing library 'skin_qt5'
+[Init] Initialized library 'skin_qt5'
+[ModuleManager] Successfully loaded module 'skin_qt5'
+[Preferences] Loading module: renderer_gl
+[ModuleManager] Loading module 'renderer_gl'
+[ModuleManager] Successfully loaded module 'renderer_gl'
+[Preferences] Loading module: GeogramPlug
+[ModuleManager] Loading module 'GeogramPlug'
+[Init] Initializing library 'GeogramPlug'
+[ModuleManager] Successfully loaded module 'GeogramPlug'
+[ModuleManager] Loading module 'gel_python3'
+[Init] Initialized library 'gel_python3'
+[ModuleManager] Successfully loaded module 'gel_python3'
+[Graphite] Running main gel file 'graphite.gel'
+[GOM] Starting Graphite ...
+[GLRenderingContext] Using GLEW 1.10.0
+[Init] Terminating library 'gel_python3'
+[Init] Terminated library 'gel_python3'
+[Init] Terminating library 'GeogramPlug'
+[Init] Terminated library 'GeogramPlug'
+[Init] Terminating library 'skin_qt5'
+[Init] Terminated library 'skin_qt5'
+[Init] Terminating library 'renderer_gl'
+[Init] Terminated library 'renderer_gl'
+[Init] Terminating library 'scene_graph'
+[Init] Terminated library 'scene_graph'
+[Init] Terminating library 'cells'
+[Init] Terminated library 'cells'
+[Init] Terminating library 'skin'
+[Init] Terminated library 'skin'
+[Init] Terminating library 'gui'
+[Init] Terminated library 'gui'
+[Init] Terminating library 'renderer'
+[Init] Terminated library 'renderer'
+[Init] Terminating library 'image'
+[Init] Terminated library 'image'
+[Init] Terminating library 'math'
+[Init] Terminated library 'math'
+[Init] Terminating library 'gom_basic'
+[Init] Terminated library 'gom_basic'
+[Init] Terminating library 'gom'
+[Init] Terminated library 'gom'
+[Init] Terminating library 'basic'
+[ModuleManager] Terminating dynamic modules
+[ModuleManager] Terminated dynamic modules
+[Init] Terminated library 'basic'
+[Logger] terminating
