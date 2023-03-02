@@ -1,0 +1,137 @@
+# vorpaline algo:delaunay=NN
+# vorpaline algo:hole_filling=loop_split
+# vorpaline algo:nn_search=BNN
+# vorpaline algo:parallel=true
+# vorpaline algo:predicates=fast
+# vorpaline algo:reconstruct=Co3Ne
+# vorpaline biblio=false
+# vorpaline biblio:command_line=false
+# vorpaline co3ne=false
+# vorpaline co3ne:Psmooth_iter=0
+# vorpaline co3ne:T12=true
+# vorpaline co3ne:max_N_angle=60
+# vorpaline co3ne:max_hole_area=5%
+# vorpaline co3ne:max_hole_edges=500
+# vorpaline co3ne:min_comp_area=0.01%
+# vorpaline co3ne:min_comp_facets=10
+# vorpaline co3ne:nb_neighbors=30
+# vorpaline co3ne:radius=5%
+# vorpaline co3ne:repair=true
+# vorpaline co3ne:strict=false
+# vorpaline co3ne:use_normals=true
+# vorpaline debug=false
+# vorpaline log:features=*
+# vorpaline log:features_exclude=
+# vorpaline log:file_name=
+# vorpaline log:pretty=true
+# vorpaline log:quiet=false
+# vorpaline nl:CUDA=false
+# vorpaline nl:MKL=false
+# vorpaline opt:Newton_m=7
+# vorpaline opt:nb_Lloyd_iter=5
+# vorpaline opt:nb_LpCVT_iter=30
+# vorpaline opt:nb_Newton_iter=30
+# vorpaline poisson:octree_depth=8
+# vorpaline poly=false
+# vorpaline poly:cells_shrink=0
+# vorpaline poly:embedding_dim=0
+# vorpaline poly:generate_ids=false
+# vorpaline poly:normal_angle_threshold=0.001
+# vorpaline poly:points_file=
+# vorpaline poly:simplify=tets_voronoi
+# vorpaline poly:tessellate_non_convex_facets=false
+# vorpaline post=false
+# vorpaline post:compute_normals=false
+# vorpaline post:isect=false
+# vorpaline post:max_deg3_dist=0.10000000000000001%
+# vorpaline post:max_hole_area=0%
+# vorpaline post:max_hole_edges=2000
+# vorpaline post:min_comp_area=0%
+# vorpaline post:repair=false
+# vorpaline pre=false
+# vorpaline pre:Nsmooth_iter=1
+# vorpaline pre:brutal_kill_borders=0
+# vorpaline pre:epsilon=0%
+# vorpaline pre:margin=0%
+# vorpaline pre:max_hole_area=0%
+# vorpaline pre:max_hole_edges=2000
+# vorpaline pre:min_comp_area=0%
+# vorpaline pre:repair=false
+# vorpaline pre:vcluster_bins=0
+# vorpaline profile=convert
+# vorpaline remesh=false
+# vorpaline remesh:Nfactor=5
+# vorpaline remesh:RVC_centroids=true
+# vorpaline remesh:anisotropy=0
+# vorpaline remesh:by_parts=false
+# vorpaline remesh:gradation=0
+# vorpaline remesh:lfs_samples=10000
+# vorpaline remesh:max_dist=0.20000000000000001
+# vorpaline remesh:multi_nerve=true
+# vorpaline remesh:nb_pts=30000
+# vorpaline remesh:refine=false
+# vorpaline remesh:sharp_edges=false
+# vorpaline sys:FPE=false
+# vorpaline sys:ascii=false
+# vorpaline sys:assert=throw
+# vorpaline sys:cancel=false
+# vorpaline sys:compression_level=3
+# vorpaline sys:lowmem=false
+# vorpaline sys:max_threads=16
+# vorpaline sys:multithread=true
+# vorpaline sys:stats=false
+# vorpaline sys:use_doubles=false
+# vorpaline tet=false
+# vorpaline tet:preprocess=true
+# vorpaline tet:quality=2
+# vorpaline tet:refine=true
+v 0 0 0 
+v 1 0 0 
+v 0 1 0 
+v 0 0.5 0 
+v 0.5 0 0 
+v 0.5 0.5 0 
+v 0 0.75 0 
+v 0.25 0.75 0 
+v 0 0.25 0 
+v 0.25 0 0 
+v 0.75 0 0 
+v 0.75 0.25 0 
+v 0 0.875 0 
+v 0.125 0.875 0 
+v 0 0.625 0 
+v 0.375 0.625 0 
+v 0 0.375 0 
+v 0 0.125 0 
+v 0.125 0 0 
+v 0.375 0 0 
+v 0.625 0.375 0 
+v 0.625 0 0 
+v 0.875 0 0 
+v 0.875 0.125 0 
+usemtl Material_0
+l 1 19
+l 19 10
+l 10 20
+l 20 5
+l 5 22
+l 22 11
+l 11 23
+l 23 2
+l 2 24
+l 24 12
+l 12 21
+l 21 6
+l 6 16
+l 16 8
+l 8 14
+l 14 3
+l 3 13
+l 13 7
+l 7 15
+l 15 4
+l 4 17
+l 17 9
+l 9 18
+l 18 1
+l 13 23
