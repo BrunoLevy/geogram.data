@@ -1,0 +1,664 @@
+# vorpaline algo:delaunay=NN
+# vorpaline algo:hole_filling=loop_split
+# vorpaline algo:nn_search=BNN
+# vorpaline algo:parallel=true
+# vorpaline algo:predicates=fast
+# vorpaline algo:reconstruct=Co3Ne
+# vorpaline base_modules=luagrob;mesh;voxel
+# vorpaline batch=false
+# vorpaline biblio=false
+# vorpaline biblio:command_line=false
+# vorpaline co3ne=false
+# vorpaline co3ne:Psmooth_iter=0
+# vorpaline co3ne:T12=true
+# vorpaline co3ne:max_N_angle=60
+# vorpaline co3ne:max_hole_area=5%
+# vorpaline co3ne:max_hole_edges=500
+# vorpaline co3ne:min_comp_area=0.01%
+# vorpaline co3ne:min_comp_facets=10
+# vorpaline co3ne:nb_neighbors=30
+# vorpaline co3ne:radius=5%
+# vorpaline co3ne:repair=true
+# vorpaline co3ne:strict=false
+# vorpaline co3ne:use_normals=true
+# vorpaline debug=false
+# vorpaline gel=Lua
+# vorpaline gel:F10_script=
+# vorpaline gel:F1_script=
+# vorpaline gel:F2_script=
+# vorpaline gel:F3_script=
+# vorpaline gel:F4_script=
+# vorpaline gel:F5_script=
+# vorpaline gel:F6_script=
+# vorpaline gel:F7_script=
+# vorpaline gel:F8_script=
+# vorpaline gel:F9_script=
+# vorpaline gel:startup_files=/home/blevy/Programming/NEWREPO/GraphiteThree/lib/GraphitePoint.lua
+# vorpaline gfx:GLSL_tesselation=true
+# vorpaline gfx:GLSL_version=0
+# vorpaline gfx:GLUP_profile=auto
+# vorpaline gfx:GL_debug=false
+# vorpaline gfx:GL_profile=core
+# vorpaline gfx:GL_version=0
+# vorpaline gfx:default_full_screen_effect=Plain
+# vorpaline gfx:full_screen=false
+# vorpaline gfx:geometry=1024x1024
+# vorpaline gfx:keypress=
+# vorpaline gfx:no_decoration=false
+# vorpaline gfx:perspective=false
+# vorpaline gfx:transparent=false
+# vorpaline gui:font_size=16
+# vorpaline gui:keyboard_nav=false
+# vorpaline gui:module_Camera_visible=true
+# vorpaline gui:module_Console_visible=false
+# vorpaline gui:module_GraphitePoint_visible=false
+# vorpaline gui:module_Programs_visible=true
+# vorpaline gui:module_Properties_visible=true
+# vorpaline gui:module_Scene_visible=true
+# vorpaline gui:module_Statistics_visible=false
+# vorpaline gui:module_Toolbox_visible=true
+# vorpaline gui:presentation_mode=false
+# vorpaline gui:shaders_selector=true
+# vorpaline gui:state=[Window][DockSpace]	Pos=0,0	Size=1024,1009	Collapsed=0		[Window][Graphite]	Pos=0,26	Size=204,983	Collapsed=0	DockId=0x00000009,0		[Window][  Camera##module]	Pos=850,26	Size=174,489	Collapsed=0	DockId=0x00000006,0		[Window][  Toolbox##module]	Pos=850,517	Size=174,492	Collapsed=0	DockId=0x0000000B,0		[Window][  Console##module]	Pos=0,780	Size=1024,228	Collapsed=0	DockId=0x00000008,0		[Window][  GraphitePoint##module]	Pos=1732,32	Size=180,559	Collapsed=0	DockId=0x00000006,2		[Window][Debug##Default]	Pos=60,60	Size=400,400	Collapsed=0		[Window][  Preferences]	Pos=61,61	Size=501,594	Collapsed=0		[Window][  Properties##module]	Pos=850,26	Size=174,489	Collapsed=0	DockId=0x00000006,1		[Window][  Programs##module]	Pos=206,325	Size=642,453	Collapsed=0	DockId=0x0000000C,0		[Window][  Statistics##module]	Pos=0,392	Size=203,415	Collapsed=0	DockId=0x0000000A		[Window][##Status]	ViewportPos=16,954	ViewportId=0x21E05854	Size=991,38	Collapsed=0		[Window][Load...##0x557bce36c8d0]	Pos=60,60	Size=350,363	Collapsed=0		[Window][  Euler2d##dialog##points:OGF::MeshGrob:Euler2d]	Pos=86,480	Size=277,295	Collapsed=0		[Docking][Data]	DockSpace         ID=0x09EF459F Window=0x9A404470 Pos=0,26 Size=1024,983 Split=Y	  DockNode        ID=0x00000007 Parent=0x09EF459F SizeRef=1024,755 Split=X	    DockNode      ID=0x00000003 Parent=0x00000007 SizeRef=848,1010 Split=X	      DockNode    ID=0x00000001 Parent=0x00000003 SizeRef=204,1010 Split=Y Selected=0xC8E8EFC9	        DockNode  ID=0x00000009 Parent=0x00000001 SizeRef=203,366 HiddenTabBar=1 Selected=0x2325022F	        DockNode  ID=0x0000000A Parent=0x00000001 SizeRef=203,415 HiddenTabBar=1 Selected=0xFBA4A3C1	      DockNode    ID=0x00000002 Parent=0x00000003 SizeRef=1538,1010 Split=Y Selected=0x2E191370	        DockNode  ID=0x00000005 Parent=0x00000002 SizeRef=642,379 CentralNode=1	        DockNode  ID=0x0000000C Parent=0x00000002 SizeRef=642,453 HiddenTabBar=1 Selected=0xBB4F1E3A	    DockNode      ID=0x00000004 Parent=0x00000007 SizeRef=174,1010 Split=Y Selected=0x6D12197B	      DockNode    ID=0x00000006 Parent=0x00000004 SizeRef=131,406 Selected=0x29AF8F84	      DockNode    ID=0x0000000B Parent=0x00000004 SizeRef=131,408 HiddenTabBar=1 Selected=0x6DF8D50C	  DockNode        ID=0x00000008 Parent=0x09EF459F SizeRef=1024,228 HiddenTabBar=1 Selected=0xB7ABC563		
+# vorpaline gui:style=Dark
+# vorpaline gui:tooltips=true
+# vorpaline gui:viewports=false
+# vorpaline hex=false
+# vorpaline hex:PGP_FF_fixed_topo=1
+# vorpaline hex:PGP_FF_free_topo=1
+# vorpaline hex:PGP_direct_solver=false
+# vorpaline hex:PGP_max_corr_prop=0.34999999999999998
+# vorpaline hex:algo=PGP3d
+# vorpaline hex:border_max_distance=20%
+# vorpaline hex:border_refine=false
+# vorpaline hex:constrained=true
+# vorpaline hex:frames_file=
+# vorpaline hex:keep_border=false
+# vorpaline hex:points_file=
+# vorpaline hex:prefer_seeds=true
+# vorpaline hex:prisms=false
+# vorpaline hex:pyramids=false
+# vorpaline hex:save_frames=false
+# vorpaline hex:save_points=false
+# vorpaline hex:save_surface=false
+# vorpaline hex:save_tets=false
+# vorpaline hex:tets_file=
+# vorpaline interactive=false
+# vorpaline log:features=*
+# vorpaline log:features_exclude=Init;ModuleMgr
+# vorpaline log:file_name=
+# vorpaline log:pretty=true
+# vorpaline log:quiet=false
+# vorpaline main=lib/graphite_imgui.lua
+# vorpaline modules=devel;Experiment
+# vorpaline nl:CUDA=false
+# vorpaline nl:MKL=false
+# vorpaline opt:Newton_m=7
+# vorpaline opt:nb_Lloyd_iter=5
+# vorpaline opt:nb_LpCVT_iter=30
+# vorpaline opt:nb_Newton_iter=30
+# vorpaline poisson:octree_depth=8
+# vorpaline post=true
+# vorpaline post:compute_normals=false
+# vorpaline post:isect=false
+# vorpaline post:max_deg3_dist=0.10000000000000001%
+# vorpaline post:max_hole_area=0%
+# vorpaline post:max_hole_edges=2000
+# vorpaline post:min_comp_area=0%
+# vorpaline post:repair=false
+# vorpaline pre=true
+# vorpaline pre:Nsmooth_iter=1
+# vorpaline pre:epsilon=0%
+# vorpaline pre:intersect=false
+# vorpaline pre:margin=0%
+# vorpaline pre:max_hole_area=0%
+# vorpaline pre:max_hole_edges=2000
+# vorpaline pre:min_comp_area=0%
+# vorpaline pre:remove_internal_shells=true
+# vorpaline pre:repair=false
+# vorpaline pre:vcluster_bins=0
+# vorpaline profile=scan
+# vorpaline remesh=true
+# vorpaline remesh:Nfactor=5
+# vorpaline remesh:RVC_centroids=true
+# vorpaline remesh:anisotropy=0
+# vorpaline remesh:by_parts=false
+# vorpaline remesh:gradation=0
+# vorpaline remesh:lfs_samples=10000
+# vorpaline remesh:max_dist=0.20000000000000001
+# vorpaline remesh:multi_nerve=true
+# vorpaline remesh:nb_pts=30000
+# vorpaline remesh:refine=false
+# vorpaline remesh:sharp_edges=false
+# vorpaline shell=false
+# vorpaline skin=skin_imgui
+# vorpaline stat:sampling_step=0.5%
+# vorpaline sys:FPE=false
+# vorpaline sys:ascii=false
+# vorpaline sys:assert=abort
+# vorpaline sys:cancel=false
+# vorpaline sys:compression_level=3
+# vorpaline sys:lowmem=false
+# vorpaline sys:max_threads=16
+# vorpaline sys:multithread=true
+# vorpaline sys:stats=false
+# vorpaline sys:use_doubles=false
+# vorpaline tet=false
+# vorpaline tet:preprocess=true
+# vorpaline tet:quality=2
+# vorpaline tet:refine=true
+v 0 0 1.17557 
+v 1.05146 0 0.525731 
+v 0.32492 1 0.525731 
+v -0.850651 0.618034 0.525731 
+v -0.850651 -0.618034 0.525731 
+v 0.32492 -1 0.525731 
+v 0.850651 0.618034 -0.525731 
+v 0.850651 -0.618034 -0.525731 
+v -0.32492 1 -0.525731 
+v -1.05146 0 -0.525731 
+v -0.32492 -1 -0.525731 
+v 0 0 -1.17557 
+v 0 0 1 
+v 0.894427 0 0.447214 
+v 0.276393 0.850651 0.447214 
+v -0.723607 0.525731 0.447214 
+v -0.723607 -0.525731 0.447214 
+v 0.276393 -0.850651 0.447214 
+v 0.723607 0.525731 -0.447214 
+v 0.723607 -0.525731 -0.447214 
+v -0.276393 0.850651 -0.447214 
+v -0.894427 0 -0.447214 
+v -0.276393 -0.850651 -0.447214 
+v 0 0 -1 
+v 0.525731 0 0.850651 
+v 0.688191 0.5 0.525731 
+v 0.16246 0.5 0.850651 
+v -0.262866 0.809017 0.525731 
+v -0.425325 0.309017 0.850651 
+v -0.850651 0 0.525731 
+v -0.425325 -0.309017 0.850651 
+v -0.262866 -0.809017 0.525731 
+v 0.16246 -0.5 0.850651 
+v 0.688191 -0.5 0.525731 
+v 0.587785 -0.809017 0 
+v 0.951057 -0.309017 0 
+v 0.850651 0 -0.525731 
+v 0.951057 0.309017 0 
+v 0.587785 0.809017 0 
+v 0.262866 0.809017 -0.525731 
+v 0 1 0 
+v -0.587785 0.809017 0 
+v -0.688191 0.5 -0.525731 
+v -0.951057 0.309017 0 
+v -0.951057 -0.309017 0 
+v -0.688191 -0.5 -0.525731 
+v -0.587785 -0.809017 0 
+v 0 -1 0 
+v 0.262866 -0.809017 -0.525731 
+v 0.425325 -0.309017 -0.850651 
+v 0.425325 0.309017 -0.850651 
+v -0.16246 0.5 -0.850651 
+v -0.16246 -0.5 -0.850651 
+v -0.525731 0 -0.850651 
+v 0.361803 0.262866 0.894427 
+v 0.638196 0.262866 0.723607 
+v 0.447214 0.525731 0.723607 
+v -0.138197 0.425325 0.894427 
+v -0.0527864 0.688191 0.723607 
+v -0.361803 0.587785 0.723607 
+v -0.447213 0 0.894427 
+v -0.67082 0.16246 0.723607 
+v -0.67082 -0.16246 0.723607 
+v -0.138197 -0.425325 0.894427 
+v -0.361803 -0.587785 0.723607 
+v -0.0527864 -0.688191 0.723607 
+v 0.361803 -0.262866 0.894427 
+v 0.447214 -0.525731 0.723607 
+v 0.638196 -0.262866 0.723607 
+v 0.861803 -0.425325 0.276393 
+v 0.67082 -0.688191 0.276393 
+v 0.809017 -0.587785 0 
+v 1 0 0 
+v 0.947214 -0.16246 -0.276393 
+v 0.947214 0.16246 -0.276393 
+v 0.861803 0.425325 0.276393 
+v 0.809017 0.587785 0 
+v 0.67082 0.688191 0.276393 
+v 0.309017 0.951057 0 
+v 0.447214 0.850651 -0.276393 
+v 0.138197 0.951057 -0.276393 
+v -0.138197 0.951057 0.276393 
+v -0.309017 0.951057 0 
+v -0.447214 0.850651 0.276393 
+v -0.809017 0.587785 0 
+v -0.67082 0.688191 -0.276393 
+v -0.861803 0.425325 -0.276393 
+v -0.947214 0.16246 0.276393 
+v -1 0 0 
+v -0.947214 -0.16246 0.276393 
+v -0.809017 -0.587785 0 
+v -0.861803 -0.425325 -0.276393 
+v -0.67082 -0.688191 -0.276393 
+v -0.447214 -0.850651 0.276393 
+v -0.309017 -0.951057 0 
+v -0.138197 -0.951057 0.276393 
+v 0.309017 -0.951057 0 
+v 0.138197 -0.951057 -0.276393 
+v 0.447214 -0.850651 -0.276393 
+v 0.67082 0.16246 -0.723607 
+v 0.67082 -0.16246 -0.723607 
+v 0.447213 0 -0.894427 
+v 0.361803 0.587785 -0.723607 
+v 0.138197 0.425325 -0.894427 
+v 0.0527864 0.688191 -0.723607 
+v 0.361803 -0.587785 -0.723607 
+v 0.0527864 -0.688191 -0.723607 
+v 0.138197 -0.425325 -0.894427 
+v -0.447214 0.525731 -0.723607 
+v -0.361803 0.262866 -0.894427 
+v -0.638196 0.262866 -0.723607 
+v -0.638196 -0.262866 -0.723607 
+v -0.361803 -0.262866 -0.894427 
+v -0.447214 -0.525731 -0.723607 
+v 0.251148 0 0.967949 
+v 0.0776089 0.238856 0.967949 
+v 0.753443 0 0.657513 
+v 0.831052 0.238856 0.502295 
+v 0.483974 0.716567 0.502295 
+v 0.232827 0.716567 0.657513 
+v -0.203183 0.147621 0.967949 
+v 0.029644 0.864188 0.502295 
+v -0.531939 0.681718 0.502295 
+v -0.609548 0.442863 0.657513 
+v -0.203183 -0.147621 0.967949 
+v -0.812731 0.295242 0.502295 
+v -0.812731 -0.295242 0.502295 
+v -0.609548 -0.442863 0.657513 
+v 0.0776089 -0.238856 0.967949 
+v -0.531939 -0.681718 0.502295 
+v 0.029644 -0.864188 0.502295 
+v 0.232827 -0.716567 0.657513 
+v 0.483974 -0.716567 0.502295 
+v 0.831052 -0.238856 0.502295 
+v 0.956626 -0.147621 0.251148 
+v 0.436009 -0.864188 0.251148 
+v 0.687157 -0.681718 -0.251148 
+v 0.860696 -0.442863 -0.251148 
+v 0.956626 0.147621 0.251148 
+v 0.812731 -0.295242 -0.502295 
+v 0.812731 0.295242 -0.502295 
+v 0.860696 0.442863 -0.251148 
+v 0.687157 0.681718 -0.251148 
+v 0.436009 0.864188 0.251148 
+v 0.155218 0.955423 0.251148 
+v 0.531939 0.681718 -0.502295 
+v -0.029644 0.864188 -0.502295 
+v -0.155218 0.955423 -0.251148 
+v -0.436009 0.864188 -0.251148 
+v -0.687157 0.681718 0.251148 
+v -0.860696 0.442863 0.251148 
+v -0.483974 0.716567 -0.502295 
+v -0.831052 0.238856 -0.502295 
+v -0.956626 0.147621 -0.251148 
+v -0.956626 -0.147621 -0.251148 
+v -0.860696 -0.442863 0.251148 
+v -0.687157 -0.681718 0.251148 
+v -0.831052 -0.238856 -0.502295 
+v -0.483974 -0.716567 -0.502295 
+v -0.436009 -0.864188 -0.251148 
+v -0.155218 -0.955423 -0.251148 
+v 0.155218 -0.955423 0.251148 
+v -0.029644 -0.864188 -0.502295 
+v 0.531939 -0.681718 -0.502295 
+v 0.609548 0.442863 -0.657513 
+v 0.609548 -0.442863 -0.657513 
+v 0.203183 -0.147621 -0.967949 
+v 0.203183 0.147621 -0.967949 
+v -0.0776089 0.238856 -0.967949 
+v -0.232827 0.716567 -0.657513 
+v -0.232827 -0.716567 -0.657513 
+v -0.0776089 -0.238856 -0.967949 
+v -0.251148 0 -0.967949 
+v -0.753443 0 -0.657513 
+usemtl Material_0
+f 1 2 3 
+f 1 3 4 
+f 1 4 5 
+f 1 5 6 
+f 1 6 2 
+f 2 6 8 
+f 2 8 7 
+f 2 7 3 
+f 3 7 9 
+f 3 9 4 
+f 4 9 10 
+f 4 10 5 
+f 5 10 11 
+f 5 11 6 
+f 6 11 8 
+f 7 8 12 
+f 7 12 9 
+f 8 11 12 
+f 9 12 10 
+f 10 12 11 
+f 57 55 56 
+f 60 58 59 
+f 63 61 62 
+f 66 64 65 
+f 69 67 68 
+f 72 70 71 
+f 75 73 74 
+f 78 76 77 
+f 81 79 80 
+f 84 82 83 
+f 87 85 86 
+f 90 88 89 
+f 93 91 92 
+f 96 94 95 
+f 99 97 98 
+f 102 100 101 
+f 105 103 104 
+f 108 106 107 
+f 111 109 110 
+f 114 112 113 
+f 116 115 55 
+f 56 117 118 
+f 120 57 119 
+f 121 116 58 
+f 59 120 122 
+f 124 60 123 
+f 125 121 61 
+f 62 124 126 
+f 128 63 127 
+f 129 125 64 
+f 65 128 130 
+f 132 66 131 
+f 115 129 67 
+f 68 132 133 
+f 117 69 134 
+f 135 134 70 
+f 71 133 136 
+f 138 72 137 
+f 139 135 73 
+f 74 138 140 
+f 142 75 141 
+f 118 139 76 
+f 77 142 143 
+f 119 78 144 
+f 145 144 79 
+f 80 143 146 
+f 148 81 147 
+f 122 145 82 
+f 83 148 149 
+f 123 84 150 
+f 151 150 85 
+f 86 149 152 
+f 154 87 153 
+f 126 151 88 
+f 89 154 155 
+f 127 90 156 
+f 157 156 91 
+f 92 155 158 
+f 160 93 159 
+f 130 157 94 
+f 95 160 161 
+f 131 96 162 
+f 136 162 97 
+f 98 161 163 
+f 137 99 164 
+f 165 141 100 
+f 101 140 166 
+f 168 102 167 
+f 146 165 103 
+f 104 168 169 
+f 147 105 170 
+f 166 164 106 
+f 107 163 171 
+f 167 108 172 
+f 152 170 109 
+f 110 169 173 
+f 153 111 174 
+f 158 174 112 
+f 113 173 172 
+f 159 114 171 
+f 27 55 57 
+f 55 25 56 
+f 57 56 26 
+f 29 58 60 
+f 58 27 59 
+f 60 59 28 
+f 31 61 63 
+f 61 29 62 
+f 63 62 30 
+f 33 64 66 
+f 64 31 65 
+f 66 65 32 
+f 25 67 69 
+f 67 33 68 
+f 69 68 34 
+f 36 70 72 
+f 70 34 71 
+f 72 71 35 
+f 38 73 75 
+f 73 36 74 
+f 75 74 37 
+f 26 76 78 
+f 76 38 77 
+f 78 77 39 
+f 41 79 81 
+f 79 39 80 
+f 81 80 40 
+f 28 82 84 
+f 82 41 83 
+f 84 83 42 
+f 44 85 87 
+f 85 42 86 
+f 87 86 43 
+f 30 88 90 
+f 88 44 89 
+f 90 89 45 
+f 47 91 93 
+f 91 45 92 
+f 93 92 46 
+f 32 94 96 
+f 94 47 95 
+f 96 95 48 
+f 35 97 99 
+f 97 48 98 
+f 99 98 49 
+f 51 100 102 
+f 100 37 101 
+f 102 101 50 
+f 40 103 105 
+f 103 51 104 
+f 105 104 52 
+f 50 106 108 
+f 106 49 107 
+f 108 107 53 
+f 43 109 111 
+f 109 52 110 
+f 111 110 54 
+f 46 112 114 
+f 112 54 113 
+f 114 113 53 
+f 13 115 116 
+f 115 25 55 
+f 116 55 27 
+f 25 117 56 
+f 117 14 118 
+f 56 118 26 
+f 27 57 120 
+f 57 26 119 
+f 120 119 15 
+f 13 116 121 
+f 116 27 58 
+f 121 58 29 
+f 27 120 59 
+f 120 15 122 
+f 59 122 28 
+f 29 60 124 
+f 60 28 123 
+f 124 123 16 
+f 13 121 125 
+f 121 29 61 
+f 125 61 31 
+f 29 124 62 
+f 124 16 126 
+f 62 126 30 
+f 31 63 128 
+f 63 30 127 
+f 128 127 17 
+f 13 125 129 
+f 125 31 64 
+f 129 64 33 
+f 31 128 65 
+f 128 17 130 
+f 65 130 32 
+f 33 66 132 
+f 66 32 131 
+f 132 131 18 
+f 13 129 115 
+f 129 33 67 
+f 115 67 25 
+f 33 132 68 
+f 132 18 133 
+f 68 133 34 
+f 25 69 117 
+f 69 34 134 
+f 117 134 14 
+f 14 134 135 
+f 134 34 70 
+f 135 70 36 
+f 34 133 71 
+f 133 18 136 
+f 71 136 35 
+f 36 72 138 
+f 72 35 137 
+f 138 137 20 
+f 14 135 139 
+f 135 36 73 
+f 139 73 38 
+f 36 138 74 
+f 138 20 140 
+f 74 140 37 
+f 38 75 142 
+f 75 37 141 
+f 142 141 19 
+f 14 139 118 
+f 139 38 76 
+f 118 76 26 
+f 38 142 77 
+f 142 19 143 
+f 77 143 39 
+f 26 78 119 
+f 78 39 144 
+f 119 144 15 
+f 15 144 145 
+f 144 39 79 
+f 145 79 41 
+f 39 143 80 
+f 143 19 146 
+f 80 146 40 
+f 41 81 148 
+f 81 40 147 
+f 148 147 21 
+f 15 145 122 
+f 145 41 82 
+f 122 82 28 
+f 41 148 83 
+f 148 21 149 
+f 83 149 42 
+f 28 84 123 
+f 84 42 150 
+f 123 150 16 
+f 16 150 151 
+f 150 42 85 
+f 151 85 44 
+f 42 149 86 
+f 149 21 152 
+f 86 152 43 
+f 44 87 154 
+f 87 43 153 
+f 154 153 22 
+f 16 151 126 
+f 151 44 88 
+f 126 88 30 
+f 44 154 89 
+f 154 22 155 
+f 89 155 45 
+f 30 90 127 
+f 90 45 156 
+f 127 156 17 
+f 17 156 157 
+f 156 45 91 
+f 157 91 47 
+f 45 155 92 
+f 155 22 158 
+f 92 158 46 
+f 47 93 160 
+f 93 46 159 
+f 160 159 23 
+f 17 157 130 
+f 157 47 94 
+f 130 94 32 
+f 47 160 95 
+f 160 23 161 
+f 95 161 48 
+f 32 96 131 
+f 96 48 162 
+f 131 162 18 
+f 18 162 136 
+f 162 48 97 
+f 136 97 35 
+f 48 161 98 
+f 161 23 163 
+f 98 163 49 
+f 35 99 137 
+f 99 49 164 
+f 137 164 20 
+f 19 141 165 
+f 141 37 100 
+f 165 100 51 
+f 37 140 101 
+f 140 20 166 
+f 101 166 50 
+f 51 102 168 
+f 102 50 167 
+f 168 167 24 
+f 19 165 146 
+f 165 51 103 
+f 146 103 40 
+f 51 168 104 
+f 168 24 169 
+f 104 169 52 
+f 40 105 147 
+f 105 52 170 
+f 147 170 21 
+f 20 164 166 
+f 164 49 106 
+f 166 106 50 
+f 49 163 107 
+f 163 23 171 
+f 107 171 53 
+f 50 108 167 
+f 108 53 172 
+f 167 172 24 
+f 21 170 152 
+f 170 52 109 
+f 152 109 43 
+f 52 169 110 
+f 169 24 173 
+f 110 173 54 
+f 43 111 153 
+f 111 54 174 
+f 153 174 22 
+f 22 174 158 
+f 174 54 112 
+f 158 112 46 
+f 54 173 113 
+f 173 24 172 
+f 113 172 53 
+f 46 114 159 
+f 114 53 171 
+f 159 171 23 
