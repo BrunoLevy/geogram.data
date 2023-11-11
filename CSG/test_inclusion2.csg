@@ -1,0 +1,7 @@
+union() {
+    difference() {
+       sphere(r = 50.0);
+       sphere(r = 40.0);
+    }
+    cylinder(h = 100.0, r1 = 20.0, r2 = 20.0);
+}

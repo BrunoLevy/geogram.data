@@ -1,0 +1,11 @@
+
+union() {
+    difference() {
+       cylinder(h = 98.0, r1=20.0, r2=20.0, center=true);
+       difference() {
+          sphere(r = 50.0, center=true);
+          sphere(r = 40.0, center=true);
+       }
+    }
+    cylinder(h = 120, r1=15, r2=15, center=true);
+}
